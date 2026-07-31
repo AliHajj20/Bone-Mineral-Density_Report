@@ -38,7 +38,7 @@ viii- Fitted the developed model with the best parameters on the training data
 ix- Used the fitted model to perform predictions on the testing subset.
 The following plot represents the predictions: 
 
-![Prediction_LogisticRegression](figure/Prediction_LogisticRegression.png)
+![Prediction_LogisticRegression](figures/Prediction_LogisticRegression.png)
 
 x- Checked the prediction metrics, which reflect the performance of the model
 
