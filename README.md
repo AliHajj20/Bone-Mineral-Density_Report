@@ -17,12 +17,19 @@ This project explores predictive modeling of bone mineral density (BMD) score us
 
 ## Linear Regression
 4- Linear regression model implementation: 
+
 i- define the type of model
+
 ii- set engine of model (computational backend of the model)
+
 iii- create the engine of the model, by defining the outcome vacriable (bone_mineral_density_score)
+
 iv- used the step_dummy() function to convert categorical predictors into numeric dummy variables, making them suitable for models like linear regression.
+
 v- applied step_normalize() to normalize all numeric predictor variables, for the purpose of ensuring all predictors have the same scale
+
 vi- created the workflow that includes the model type with its engine and the recipe in a single object.
+
 vii- performed hyperparameter tuning. I defined the grid of combinations of penalty and mixture values (3 values each) that will be tested during hyperparameter tuning to find the best model. Using cross-validation, I evaluated all parameter combinations to determine their effect on model performance, measured by RMSE and R². The best-performing model, selected based on the lowest RMSE, had penalty = 0 and mixture = 0.05, achieving an RMSE of 0.447 and an R² of 0.999998, indicating excellent predictive accuracy.
 viii- Fitted the developed model with the best parameters on the training data
 ix- Used the fitted model to perform predictions on the testing subset.
