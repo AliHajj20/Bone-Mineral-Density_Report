@@ -93,7 +93,22 @@ x- The predictors that have the most importance in terms of contributing to the 
 ![IMPORTANCE_PLOT](figures/Imp_Pred_RandomForest.png)
 
 7- The importance plot obtained is equivalent to the one obtained in the linear regression. Potassium is the most important predictor.
-I generated a scatter plot and performed Pearson correlation to study the correlation between potassium and the Bone Mineral Density Score.
+*I generated a scatter plot and performed Pearson correlation to study the correlation between potassium and the Bone Mineral Density Score.
+* Scatter_PLOT:
+![ScatterPlot_Potassium](figures/ScatterPlot_Potassium.png)
+* Pearson Correlation:
+![PearsonCorrelation](figures/PearsonCorrelation_Potassium.png)
+
+* The potassium predictor shows positive correlation with the bone mineral density score, having correlation coefficient of +1.
+* I then calculated the p-value.
+* The p-value equal 0 shows that the correlation result obtained is statistically significant
+
+## K.Nearest Neighbours
+
+8- * K.Nearest Neighbours model implementation:
+* I performed the procedure similar to one done before with the 2 previous mdoels
+* The best model obtained after tuning has many neighbors equal to 10.
+* I then performed prediction of the defined model on the testing subset:
 
 
 
