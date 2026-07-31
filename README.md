@@ -105,13 +105,42 @@ x- The predictors that have the most importance in terms of contributing to the 
 
 ## K.Nearest Neighbours
 
-8- * K.Nearest Neighbours model implementation:
-* I performed the procedure similar to one done before with the 2 previous mdoels
+8- K.Nearest Neighbours model implementation:
+i- * I performed the procedure similar to one done before with the 2 previous mdoels
 * The best model obtained after tuning has many neighbors equal to 10.
 * I then performed prediction of the defined model on the testing subset:
 
+![Prediction_KNN](figures/Prediction_KNN.png)
 
+ii- Calculated the metrics that provide insights about the model performance
 
+* .metric .estimator .estimate .config             
+  <chr>   <chr>          <dbl> <chr>               
+* 1 rmse    standard      10.5   Preprocessor1_Model1
+* 2 rsq     standard       0.603 Preprocessor1_Model1
+* The high RMSE value and the RSQ values being further from 1 in the KNN model further validate the model's lower performance compared to the previous 2 models(Linear regression and Random forest)
 
+## Model Comparison
+  9- Model comparison
+The plot above shows the RMSE and RSQ metrics of the 3 models used in this report(Logistic Regression, Random Forest, and KNN)
 
+![RMSE_COMPARISON](figures/RMSE_ModelComparison.png)
+![RSQ_COMPARISON](figures/RSQ_ModelComparison.png)
+
+* RMSE is highest in Linear regression and lowest in KNN, this suggests that there is minimal residual error in linear regression and KNN showed the highest residual error.
+R square is approximately 1 in linear regression and is furthest from 1 in KNN.
+This shows that linear regression has the best predictive performance.
+
+10- 
+The plot below shows the predictive performance of all models
+
+![Prediction](figures/Prediction_Comparison.png)
+
+11- Generated a scatter plot to study the relationship between the 4 most important predictors and the outcome variable
+
+![ScatterPlot_4i_ImpPredictor](figure/ScatterPlot_ImpPredictors.png)
+
+*Overall the predictors are weakly correlated across the data set due to the points largely overlapping in the scatter plot and showing no trends.
+The diagonal plots is a density plot that shows the distribution of the predictor split by the outcome category(red for low/green for medium/blue for high).
+Similar trend are observed in calcium/GlycA/Cortisol, showing that for lower values for those predictors there is high bone_mineral_density_score and for higher values of those predictors there is low bone mineral density score. And the case is opposite for the potassium predictor. The upper triangle shows correlation coefficients between the two predictors. Over all the correlations between predictors is near 0.
 
